@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Netflix</string>
+    <string name="s_ries">科幻小說</string>
+    <string name="filmes">電影</string>
+    <string name="minha_lista">我的清單</string>
+    <string name="fic_o_cient_fica">科幻小說</string>
+    <string name="space_opera">太空歌劇</string>
+    <string name="distopia">反烏托邦</string>
+    <string name="assistir">觀看</string>
+    <string name="detalhes">詳細資料</string>
+    <string name="lan_amentos">發行</string>
+    <string name="minha_lista2">我的清單</string>
+</resources>
