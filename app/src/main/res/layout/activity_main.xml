@@ -26,26 +26,12 @@
         android:backgroundTint="@color/Red"
         android:text="Assistir"
         app:icon="@drawable/play_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
-
-    <Button
-        android:id="@+id/buttonMinhaLista"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:backgroundTint="@android:color/transparent"
-        android:drawableTop="@drawable/outline_add_24"
-        android:text="MINHA LISTA"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMinhaLista"
         app:layout_constraintEnd_toStartOf="@+id/buttonDetalhes"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="233dp" />
+        app:layout_constraintStart_toEndOf="@+id/buttonMinhaLista"
+        app:layout_constraintTop_toTopOf="@+id/buttonMinhaLista"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonDetalhes"
@@ -53,12 +39,32 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@android:color/transparent"
         android:text="DETALHES"
+        android:textSize="12sp"
         app:icon="@drawable/info"
         app:iconGravity="textTop"
+        app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonMinhaLista"
-        tools:layout_editor_absoluteY="239dp" />
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/buttonMinhaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="MINHA LISTA"
+        android:textSize="12sp"
+        app:icon="@drawable/outline_add_24"
+        app:iconGravity="textTop"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/nameDune" />
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -159,8 +165,7 @@
         android:text="Distopia"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/Genre2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
         app:layout_constraintStart_toEndOf="@+id/Genre2"
         app:layout_constraintTop_toTopOf="@+id/Genre2"
         app:layout_constraintVertical_bias="0.0" />
@@ -169,58 +174,71 @@
         android:id="@+id/Genre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Ficção Científica"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/Genre2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="185dp" />
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/nameDune" />
 
     <TextView
         android:id="@+id/textViewLancamentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
         android:text="Lançamentos"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEsquerda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="19dp" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="392dp" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="126dp"
-        android:layout_height="334dp"
-        app:srcCompat="@drawable/duneantigo"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="223dp" />
+        android:id="@+id/imageViewDune2"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDUNEold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLancamentos"
+        app:srcCompat="@drawable/dune2" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="125dp"
-        android:layout_height="436dp"
-        app:srcCompat="@drawable/messiah"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="171dp" />
+        android:id="@+id/imageViewDUNEold"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDune2"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewDune3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDune2"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDune2"
+        app:srcCompat="@drawable/duneantigo" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="125dp"
-        android:layout_height="74dp"
-        app:srcCompat="@drawable/dune2"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="351dp" />
+        android:id="@+id/imageViewDune3"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewDUNEold"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewDUNEold"
+        app:layout_constraintTop_toTopOf="@+id/imageViewDUNEold"
+        app:srcCompat="@drawable/messiah" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
